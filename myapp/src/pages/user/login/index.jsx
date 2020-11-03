@@ -24,6 +24,7 @@ const Login = (props) => {
   const [type, setType] = useState('account');
 
   const handleSubmit = (values) => {
+    // console.log(values,'什么数据',type)
     const { dispatch } = props;
     dispatch({
       type: 'login/login',
@@ -92,7 +93,7 @@ const Login = (props) => {
             ]}
           />
         </Tab>
-        <div>
+        {/* <div>
           <Checkbox checked={autoLogin} onChange={(e) => setAutoLogin(e.target.checked)}>
             自动登录
           </Checkbox>
@@ -103,9 +104,9 @@ const Login = (props) => {
           >
             忘记密码
           </a>
-        </div>
+        </div> */}
         <Submit loading={submitting}>登录</Submit>
-        <div className={styles.other}>
+        {/* <div className={styles.other}>
           其他登录方式
           <AlipayCircleOutlined className={styles.icon} />
           <TaobaoCircleOutlined className={styles.icon} />
@@ -113,7 +114,7 @@ const Login = (props) => {
           <Link className={styles.register} to="/user/register">
             注册账户
           </Link>
-        </div>
+        </div> */}
       </LoginForm>
     </div>
   );
